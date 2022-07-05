@@ -10,7 +10,9 @@ internal class Address
     public string Province { get; private set; }
     public string Zip { get; private set; }
 
-    public Address(string name, string surname, string street, string city, string province, string zip)
+    public string errorMessage;
+
+    public Address(string name, string surname, string street, string city, string province, string zip, string errorMessage)
     {
         this.Name = name;
         this.Surname = surname;
@@ -18,17 +20,28 @@ internal class Address
         this.City = city;
         this.Province = province;
         this.Zip = zip;
+        this.errorMessage = errorMessage;
     }
 
     public void PrintAddress()
     {
         Console.WriteLine("------ Address ------");
-        Console.WriteLine("\tName: {0}", this.Name);
-        Console.WriteLine("\tSurname: {0}", this.Surname);
-        Console.WriteLine("\tStreet: {0}", this.Street);
-        Console.WriteLine("\tCity: {0}", this.City);
-        Console.WriteLine("\tProvince: {0}", this.Province);
-        Console.WriteLine("\tZip: {0}", this.Zip);
+
+
+        if (this.errorMessage != "")
+        {
+            Console.WriteLine(this.errorMessage);
+        } else
+        {
+            Console.WriteLine("\tName: {0}", this.Name);
+            Console.WriteLine("\tSurname: {0}", this.Surname);
+            Console.WriteLine("\tStreet: {0}", this.Street);
+            Console.WriteLine("\tCity: {0}", this.City);
+            Console.WriteLine("\tProvince: {0}", this.Province);
+            Console.WriteLine("\tZip: {0}", this.Zip);
+        }
+
+
 
         //Console.WriteLine("Surname:\t " + this.Surname + "\t");
         //Console.WriteLine("Street:\t " + this.Street + "\t");

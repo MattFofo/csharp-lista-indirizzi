@@ -13,7 +13,16 @@ while (!addressesFromFile.EndOfStream)
     string line = addressesFromFile.ReadLine();
     Console.WriteLine(line);
     string[] data = line.Split(",");
+    string formatError = "";
 
+    if (data.Length != 6)
+    {
+        formatError = "Il formato dell'indirizzo è errato";
+
+    }
+
+
+    
     string name = data[0];
     string surname = data[1];
     string street = data[2];
@@ -36,13 +45,14 @@ while (!addressesFromFile.EndOfStream)
     }
     catch (Exception exp)
     {
-
         zip = "";
     }
 
+
+
     
 
-    Address address = new Address(name, surname, street, city, province, zip);
+    Address address = new Address(name, surname, street, city, province, zip, formatError);
     addresses.Add(address);
 }
 
