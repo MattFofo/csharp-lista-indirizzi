@@ -27,7 +27,6 @@ internal class Address
     {
         Console.WriteLine("------ Address ------");
 
-
         if (this.errorMessage != "")
         {
             Console.WriteLine(this.errorMessage);
@@ -40,14 +39,6 @@ internal class Address
             Console.WriteLine("\tProvince: {0}", this.Province);
             Console.WriteLine("\tZip: {0}", this.Zip);
         }
-
-
-
-        //Console.WriteLine("Surname:\t " + this.Surname + "\t");
-        //Console.WriteLine("Street:\t " + this.Street + "\t");
-        //Console.WriteLine("City:\t " + this.City + "\t");
-        //Console.WriteLine("Province:\t " + this.Province + "\t");
-        //Console.WriteLine("Zip:\t " + this.Zip + "\t");
         Console.WriteLine("---------------------");
     }
 }

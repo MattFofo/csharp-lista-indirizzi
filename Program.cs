@@ -11,7 +11,6 @@ List<Address> addresses = new List<Address>();
 while (!addressesFromFile.EndOfStream)
 {
     string line = addressesFromFile.ReadLine();
-    Console.WriteLine(line);
     string[] data = line.Split(",");
     string formatError = "";
 
@@ -20,15 +19,55 @@ while (!addressesFromFile.EndOfStream)
         formatError = "Il formato dell'indirizzo è errato";
 
     }
-
-
     
-    string name = data[0];
-    string surname = data[1];
-    string street = data[2];
-    string city = data[3];
+    string name;
+    string surname;
+    string street;
+    string city;
     string province;
     string zip;
+
+
+    try
+    {
+        name = data[0];
+    }
+    catch (Exception exc)
+    {
+
+        name = "";
+    }
+
+    try
+    {
+        surname = data[1];
+    }
+    catch (Exception exp)
+    {
+        surname = "";
+    }
+
+    try
+    {
+        street = data[2];
+    }
+    catch (Exception exc)
+    {
+
+        street = "";
+    }
+
+    try
+    {
+        city = data[3];
+    }
+    catch (Exception exp)
+    {
+        city = "";
+    }
+
+
+
     try
     {
         province = data[4];
@@ -38,6 +77,7 @@ while (!addressesFromFile.EndOfStream)
 
         province = "";
     }
+
 
     try
     {
