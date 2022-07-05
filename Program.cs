@@ -27,7 +27,7 @@ while (!addressesFromFile.EndOfStream)
     catch (Exception exc)
     {
 
-        province = "ND";
+        province = "";
     }
 
     try
@@ -37,7 +37,7 @@ while (!addressesFromFile.EndOfStream)
     catch (Exception exp)
     {
 
-        zip = "ND";
+        zip = "";
     }
 
     

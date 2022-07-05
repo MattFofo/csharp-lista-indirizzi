@@ -23,12 +23,18 @@ internal class Address
     public void PrintAddress()
     {
         Console.WriteLine("------ Address ------");
-        Console.WriteLine("Name: " + this.Name);
-        Console.WriteLine("Surname: " + this.Surname);
-        Console.WriteLine("Street: " + this.Street);
-        Console.WriteLine("City: " + this.City);
-        Console.WriteLine("Province: " + this.Province);
-        Console.WriteLine("Zip: " + this.Zip);
+        Console.WriteLine("\tName: {0}", this.Name);
+        Console.WriteLine("\tSurname: {0}", this.Surname);
+        Console.WriteLine("\tStreet: {0}", this.Street);
+        Console.WriteLine("\tCity: {0}", this.City);
+        Console.WriteLine("\tProvince: {0}", this.Province);
+        Console.WriteLine("\tZip: {0}", this.Zip);
+
+        //Console.WriteLine("Surname:\t " + this.Surname + "\t");
+        //Console.WriteLine("Street:\t " + this.Street + "\t");
+        //Console.WriteLine("City:\t " + this.City + "\t");
+        //Console.WriteLine("Province:\t " + this.Province + "\t");
+        //Console.WriteLine("Zip:\t " + this.Zip + "\t");
         Console.WriteLine("---------------------");
     }
 }
